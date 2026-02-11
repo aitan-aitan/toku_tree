@@ -1,0 +1,195 @@
+body {
+  color: white;
+  background-color: #38761d;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500px;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+p {
+  font-size: 36px;
+}
+
+a {
+  display: block;
+  color: white;
+  font-size: 24px;
+  padding: 10px 30px;
+}
+
+.toapp {
+  display: inline-block;
+  font-size: 48px;
+  color: #38761d;
+  background-color: white;
+}
+
+.c {
+  display: block;
+  color: #38bb1d;
+  font-size: 11px;
+  vertical-align: center;
+  padding: 50px;
+}
+
+.sh {
+  font-size: 32px;
+  text-align: center;
+}
+
+.s {
+  font-size: 24px;
+}
+
+/* === BOXの定義 ================================================= */
+.s1d {
+  position      : relative;                   /* relative指定は必須 */
+ 
+  margin        : auto;               /* 色や文字情報は変更ください */
+  max-width     : auto;
+  padding       : 0 10px;
+  background    : none;
+  border        : 3px solid #006633;
+  border-radius : 8px;
+  text-align    : left;
+  line-height   : 1.3;
+  font-size     : 24px;
+}
+ 
+ /* === 文書を書くBOX ============================================= */
+.s1d > div {
+  overflow      : hidden;                       /* hidden指定は必須 */
+}
+ 
+ /* === チェックボックス ========================================== */
+.s1d > input {
+  display       : none;                                   /* 非表示 */
+}
+ 
+ /* === チェックボックスのlabel（＝ボタンに見せる） =============== */
+.s1d > label {
+  position      : absolute;
+  display       : inline-block;
+  bottom        : 3px;
+  right         : 3px;
+  padding       : 5px 8px;
+  background    : #fff;
+  color         : #008000;
+  border        : 2px solid #008000;
+  border-radius : 6px;
+  font-size     : 9pt;
+  font-weight   : bold;
+}
+ 
+ /* === ボタンにカーソルが乗った時 ================================ */
+.s1d > label:hover {
+  background    : #b1f3b1;
+}
+ 
+ /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
+.s1d > input[type="checkbox"]:not(:checked) ~ div {
+  height        : 120px;
+}
+ 
+ /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
+.s1d > input[type="checkbox"]:checked ~ div {
+  padding-bottom: 30px;
+}
+ 
+ /* --- ボタンに表示する文字（閉じているとき） -------------------- */
+.s1d > input[type="checkbox"]:not(:checked) + label::after {
+  content       : "続きを開く";
+}
+ 
+ /* --- ボタンに表示する文字（開いているとき） -------------------- */
+.s1d > input[type="checkbox"]:checked + label::after {
+  content       : "閉じる";
+}
+
+/* === BOXの定義 ================================================= */
+.s2d {
+  position      : relative;                   /* relative指定は必須 */
+ 
+  margin        : auto;               /* 色や文字情報は変更ください */
+  max-width     : auto;
+  padding       : 0 10px;
+  background    : none;
+  border        : 3px solid #006633;
+  border-radius : 8px;
+  text-align    : left;
+  line-height   : 1.3;
+  font-size     : 24px;
+}
+ 
+ /* === 文書を書くBOX ============================================= */
+.s2d > div {
+  overflow      : hidden;                       /* hidden指定は必須 */
+}
+ 
+ /* === チェックボックス ========================================== */
+.s2d > input {
+  display       : none;                                   /* 非表示 */
+}
+ 
+ /* === チェックボックスのlabel（＝ボタンに見せる） =============== */
+.s2d > label {
+  position      : absolute;
+  display       : inline-block;
+  bottom        : 3px;
+  right         : 3px;
+  padding       : 5px 8px;
+  background    : #fff;
+  color         : #008000;
+  border        : 2px solid #008000;
+  border-radius : 6px;
+  font-size     : 9pt;
+  font-weight   : bold;
+}
+ 
+ /* === ボタンにカーソルが乗った時 ================================ */
+.s2d > label:hover {
+  background    : #b1f3b1;
+}
+ 
+ /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
+.s2d > input[type="checkbox"]:not(:checked) ~ div {
+  height        : 120px;
+}
+ 
+ /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
+.s2d > input[type="checkbox"]:checked ~ div {
+  padding-bottom: 30px;
+}
+ 
+ /* --- ボタンに表示する文字（閉じているとき） -------------------- */
+.s2d > input[type="checkbox"]:not(:checked) + label::after {
+  content       : "続きを開く";
+}
+ 
+ /* --- ボタンに表示する文字（開いているとき） -------------------- */
+.s2d > input[type="checkbox"]:checked + label::after {
+  content       : "閉じる";
+}
+
+.bo {
+  position   : relative;                /* 指定した分だけ相対的に移動 */
+}
+
+.bo:hover .b {
+  display: inline;                /* インライン要素として表示 */
+}
+
+.b {
+	color: black;
+  position: absolute;                /* 親要素を基準 */
+  display: none;                        /* 要素を非表示 */
+  background-color: #ffffff;       /* 背景色（透明度） */
+  width: 500px;                          /* 吹き出し全体の幅 */
+  right: 10%;                          /* 表示位置 */
+  font-size: 100%;                       /* 文字サイズ */
+}
