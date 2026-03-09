@@ -1,195 +1,187 @@
+* {
+	font-family: "Noto Serif JP", serif;
+	font-weight: 400;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+}
+
 body {
-  color: white;
-  background-color: #38761d;
-  text-align: center;
-  font-family: "Noto Serif JP", serif;
-  font-weight: 500px;
-  font-style: normal;
+	margin: 0;
+	width: 100%;
 }
 
-h1 {
-  font-size: 120px;
+.navi {
+	color: white;
+	margin-top: 10vh;
+	text-align: center;
 }
 
-p {
-  font-size: 36px;
+.navi_i {
+	display: block;
+	width: 70px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-a {
-  display: block;
-  color: white;
-  font-size: 24px;
-  padding: 10px 30px;
+@keyframes nuu1 {
+	from {
+		clip-path: ellipse(0px 0px);
+	}
+	to {
+		clip-path: ellipse(100vh 100vh);
+	}
 }
 
-.toapp {
-  display: inline-block;
-  font-size: 48px;
-  color: #38761d;
-  background-color: white;
+@keyframes nuu2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+section {
+	position: relative;
+	width: 100%;
+	height: 300vh;
+}
+
+.section3 {
+	height: 100vh;
+}
+
+.section5 {
+	height: 50vh;
+}
+
+span {
+	font-size: 32px;
+	font-weight: 700;
+	background-color: white;
+}
+
+.text {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: sticky;
+	top: 100vh;
+	width: 30vw;
+	background-color: white;
+	line-height: 2;
+	padding: 1rem 2rem;
+	margin-bottom: 50vh;
+	font-size: 18px;
+}
+
+.image_1 {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	position: sticky;
+	top: 0;
+	animation: nuu1 linear both;
+	animation-timeline: view();
+	animation-range: contain 0% contain 70%;
+}
+
+.image_2 {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	position: sticky;
+	top: 0;
+	animation: nuu2 linear both;
+	animation-timeline: view();
+	animation-range: contain 0% contain 70%;
+}
+
+.btn {
+	display: inline-block;
+	position: absolute;
+	width: 200px;                    /* 横幅 */
+	height: 60px;                    /* 高さ */
+	text-align: center;              /* 水平方向は中央揃え */
+	line-height: 56px;               /* 行の高さ */
+	top: 40%;								/*親要素を起点に上から50%*/
+	left: 50%;								/*親要素を起点に左から50%*/
+	transform: translateY(-50%) translateX(-50%);/*要素の大きさの半分ずつを戻す*/
+}
+
+.btn span {
+	display: block;                  /* ブロック要素 */
+	position: absolute;              /* 親要素の左上を基準位置 */
+	width: 100%;                     /* 横幅 */
+	height: 100%;                    /* 高さ */
+	border: 2px solid #fff;          /* 罫線 */
+	transform-style: preserve-3d;    /* 重なりを3Dで表示 */
+	transition: 0.5s; 							 /* 変化時間 */
+}
+
+.btn span:nth-child(1) {
+	background-color: #000000;  		 /* Buttonボタンの色 */
+	color: #ffffff;       				   /* Buttonの文字の色 */
+	transform: rotateX(0deg);        /* 横軸の回転なし */
+	transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+
+.btn span:nth-child(2) {
+	background-color: #00aa00;  		 /* Clickボタンの色 */
+	color: #ffffff;      					   /* Clickの文字の色 */
+	transform: rotateX(-90deg);      /* 横軸で前方に90度回転 */
+	transform-origin: 0 50%  -30px;  /* transformの起点 */
+}
+
+.btn:hover span:nth-child(1) {
+	transform: rotateX(90deg);       /* 横軸で90度回転 */
+}
+
+.btn:hover span:nth-child(2) {
+	transform: rotateX(0deg);        /* 横軸の回転なし */
+}
+
+.btn2-area {
+	display: inline-block;
+	position: absolute;
+	color: white;
+	height: 60px;                    /* 高さ */
+	text-align: center;              /* 水平方向は中央揃え */
+	line-height: 56px;               /* 行の高さ */
+	top: 60%;								/*親要素を起点に上から50%*/
+	left: 50%;								/*親要素を起点に左から50%*/
+	transform: translateY(-50%) translateX(-50%);/*要素の大きさの半分ずつを戻す*/
+}
+
+.btn2-area a{
+	color: white;
+	font-size: 28px;
+}
+
+.btn2-area a:visited {
+	color: white;
 }
 
 .c {
-  display: block;
-  color: #38bb1d;
-  font-size: 11px;
-  vertical-align: center;
-  padding: 50px;
+	color: #aaa;
 }
 
-.sh {
-  font-size: 32px;
-  text-align: center;
+h1 {
+	color: white;
+	text-align: center;
+	margin-top: 20px;
 }
 
-.s {
-  font-size: 24px;
+.faqtitle {
+	color: white;
+	text-align: center;
+	padding: 15px;
 }
 
-/* === BOXの定義 ================================================= */
-.s1d {
-  position      : relative;                   /* relative指定は必須 */
- 
-  margin        : auto;               /* 色や文字情報は変更ください */
-  max-width     : auto;
-  padding       : 0 10px;
-  background    : none;
-  border        : 3px solid #006633;
-  border-radius : 8px;
-  text-align    : left;
-  line-height   : 1.3;
-  font-size     : 24px;
-}
- 
- /* === 文書を書くBOX ============================================= */
-.s1d > div {
-  overflow      : hidden;                       /* hidden指定は必須 */
-}
- 
- /* === チェックボックス ========================================== */
-.s1d > input {
-  display       : none;                                   /* 非表示 */
-}
- 
- /* === チェックボックスのlabel（＝ボタンに見せる） =============== */
-.s1d > label {
-  position      : absolute;
-  display       : inline-block;
-  bottom        : 3px;
-  right         : 3px;
-  padding       : 5px 8px;
-  background    : #fff;
-  color         : #008000;
-  border        : 2px solid #008000;
-  border-radius : 6px;
-  font-size     : 9pt;
-  font-weight   : bold;
-}
- 
- /* === ボタンにカーソルが乗った時 ================================ */
-.s1d > label:hover {
-  background    : #b1f3b1;
-}
- 
- /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
-.s1d > input[type="checkbox"]:not(:checked) ~ div {
-  height        : 120px;
-}
- 
- /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
-.s1d > input[type="checkbox"]:checked ~ div {
-  padding-bottom: 30px;
-}
- 
- /* --- ボタンに表示する文字（閉じているとき） -------------------- */
-.s1d > input[type="checkbox"]:not(:checked) + label::after {
-  content       : "続きを開く";
-}
- 
- /* --- ボタンに表示する文字（開いているとき） -------------------- */
-.s1d > input[type="checkbox"]:checked + label::after {
-  content       : "閉じる";
-}
-
-/* === BOXの定義 ================================================= */
-.s2d {
-  position      : relative;                   /* relative指定は必須 */
- 
-  margin        : auto;               /* 色や文字情報は変更ください */
-  max-width     : auto;
-  padding       : 0 10px;
-  background    : none;
-  border        : 3px solid #006633;
-  border-radius : 8px;
-  text-align    : left;
-  line-height   : 1.3;
-  font-size     : 24px;
-}
- 
- /* === 文書を書くBOX ============================================= */
-.s2d > div {
-  overflow      : hidden;                       /* hidden指定は必須 */
-}
- 
- /* === チェックボックス ========================================== */
-.s2d > input {
-  display       : none;                                   /* 非表示 */
-}
- 
- /* === チェックボックスのlabel（＝ボタンに見せる） =============== */
-.s2d > label {
-  position      : absolute;
-  display       : inline-block;
-  bottom        : 3px;
-  right         : 3px;
-  padding       : 5px 8px;
-  background    : #fff;
-  color         : #008000;
-  border        : 2px solid #008000;
-  border-radius : 6px;
-  font-size     : 9pt;
-  font-weight   : bold;
-}
- 
- /* === ボタンにカーソルが乗った時 ================================ */
-.s2d > label:hover {
-  background    : #b1f3b1;
-}
- 
- /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
-.s2d > input[type="checkbox"]:not(:checked) ~ div {
-  height        : 120px;
-}
- 
- /* === 文書のエリアの高さ（「続きを開く」が表示されているとき）=== */
-.s2d > input[type="checkbox"]:checked ~ div {
-  padding-bottom: 30px;
-}
- 
- /* --- ボタンに表示する文字（閉じているとき） -------------------- */
-.s2d > input[type="checkbox"]:not(:checked) + label::after {
-  content       : "続きを開く";
-}
- 
- /* --- ボタンに表示する文字（開いているとき） -------------------- */
-.s2d > input[type="checkbox"]:checked + label::after {
-  content       : "閉じる";
-}
-
-.bo {
-  position   : relative;                /* 指定した分だけ相対的に移動 */
-}
-
-.bo:hover .b {
-  display: inline;                /* インライン要素として表示 */
-}
-
-.b {
-	color: black;
-  position: absolute;                /* 親要素を基準 */
-  display: none;                        /* 要素を非表示 */
-  background-color: #ffffff;       /* 背景色（透明度） */
-  width: 500px;                          /* 吹き出し全体の幅 */
-  right: 10%;                          /* 表示位置 */
-  font-size: 100%;                       /* 文字サイズ */
+.faqtext {
+	color: white;
+	text-align: center;
+	font-size: 18px;
 }
