@@ -30,7 +30,7 @@ body {
 		clip-path: ellipse(0px 0px);
 	}
 	to {
-		clip-path: ellipse(100vh 100vh);
+		clip-path: ellipse(130vw 130vw);
 	}
 }
 
