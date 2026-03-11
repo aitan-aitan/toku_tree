@@ -51,7 +51,7 @@ async function loadAll(){
 
   const rows = [];
 
-  for(let i=1;i<max;i++){ // タイトル行スキップ
+  for(let i=1;i<max;i++){ // 1行目スキップ
 
     rows.push({
       クラス:cls[i] || "",
@@ -70,10 +70,10 @@ async function loadAll(){
 
 function classToColor(cls){
 
-  if(cls.includes("1")) return "class1";
-  if(cls.includes("2")) return "class2";
-  if(cls.includes("3")) return "class3";
-  if(cls.includes("4")) return "class4";
+  if(String(cls).includes("1")) return "class1";
+  if(String(cls).includes("2")) return "class2";
+  if(String(cls).includes("3")) return "class3";
+  if(String(cls).includes("4")) return "class4";
 
   return "";
 
@@ -118,20 +118,26 @@ function render(rows){
 
 }
 
-document.getElementById("search").addEventListener("input",e=>{
+const searchBox = document.getElementById("search");
 
-  const q = e.target.value.toLowerCase();
+if(searchBox){
 
-  const filtered = allRows.filter(r =>
+  searchBox.addEventListener("input", e => {
 
-    String(r["クラス"]).toLowerCase().includes(q) ||
-    String(r["内容"]).toLowerCase().includes(q) ||
-    String(r["出席番号"]).toLowerCase().includes(q)
+    const q = e.target.value.toLowerCase();
 
-  );
+    const filtered = allRows.filter(r =>
 
-  render(filtered);
+      String(r["クラス"]).toLowerCase().includes(q) ||
+      String(r["内容"]).toLowerCase().includes(q) ||
+      String(r["出席番号"]).toLowerCase().includes(q)
 
-});
+    );
+
+    render(filtered);
+
+  });
+
+}
 
 loadAll();
