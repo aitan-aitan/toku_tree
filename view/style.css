@@ -1,0 +1,42 @@
+body{
+  font-family:Arial, sans-serif;
+  margin:40px;
+  background:#fafafa;
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+#tabs{
+  margin-bottom:20px;
+}
+
+button{
+
+  padding:8px 14px;
+  margin-right:6px;
+
+  border:1px solid #ccc;
+  background:#f3f3f3;
+
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ddd;
+}
+
+table{
+  border-collapse:collapse;
+  background:white;
+}
+
+td,th{
+  border:1px solid #ccc;
+  padding:6px 10px;
+}
+
+th{
+  background:#eee;
+}
