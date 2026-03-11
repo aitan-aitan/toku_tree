@@ -1,42 +1,42 @@
 body{
-  font-family: "Noto Sans JP", sans;
+  font-family: "Noto Sans JP", sans;;
+  background:#f4f6fb;
   margin:40px;
-  background:#f5f7fb;
+}
+
+h1{
+  margin-bottom:20px;
 }
 
 #search{
-  padding:10px 12px;
+  padding:10px;
+  font-size:16px;
+  margin-bottom:20px;
   width:260px;
   border-radius:6px;
   border:1px solid #ccc;
-  margin-bottom:20px;
 }
 
 table{
   border-collapse:collapse;
   background:white;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-th{
-  background:#f0f2f7;
-  text-align:left;
+th,td{
   padding:10px 14px;
-}
-
-td{
-  padding:10px 14px;
-}
-
-td,th{
   border-bottom:1px solid #eee;
 }
 
-tr:hover{
-  filter:brightness(0.97);
+th{
+  background:#f1f3f8;
 }
 
-/* クラスカラー */
+tr:hover{
+  filter:brightness(0.96);
+}
+
+/* クラス色 */
 
 .class1{ background:#ffb3b3; }
 .class1.private{ background:#ffe5e5; }
